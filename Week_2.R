@@ -59,6 +59,9 @@ cr <- corr("specdata", 400)
 head(cr)
 summary(cr)
 
+ls(environment(corr))
+get("files", environment(corr))
+
 cr <- corr("specdata", 5000)
 summary(cr)
 length(cr)
@@ -117,8 +120,7 @@ print(out)
 #243.0000   0.2540   0.0504  -0.1462  -0.1680   0.5969
 
 #quiz 10
-cr <- corr("specdata", 2000)                
-n <- length(cr)                
+cr <- length(cr)                
 cr <- corr("specdata", 1000)                
 cr <- sort(cr)
 print(c(n, round(cr, 4)))
